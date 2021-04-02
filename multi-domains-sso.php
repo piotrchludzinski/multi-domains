@@ -322,7 +322,7 @@ if( !class_exists("Multidomains_Sso") ):
      */
     function add_query_var_for_endpoint($vars) {
         add_rewrite_endpoint( self::SSO_ENDPOINT, EP_ALL );
-        $vars[] = self::SSO_ENDPOINT;
+        $vars .= self::SSO_ENDPOINT;
         $this->_flush_rewrite_rules();
         return $vars;
     }
